@@ -71,10 +71,10 @@ public class BusListDAO {
 		}
 	}
 	
-	public void busListAll(DefaultTableModel dt, String v1, String v2) {
+	public void busListAll(DefaultTableModel dt, String name1, String v1) {
 		try {
 			st = con.createStatement();
-			sql = "select * from buslist where "+v1.trim()+" = '"+v2.trim()+"'";
+			sql = "select * from buslist where "+name1.trim()+" = '"+v1.trim()+"'";
 			rs = st.executeQuery(sql);
 			
 			for(int i = 0; i < dt.getRowCount();) {
@@ -99,10 +99,10 @@ public class BusListDAO {
 		}
 	}
 	
-	public void busListAll(DefaultTableModel dt, String v1, String v2, String v3, String v4) {
+	public void busListAll(DefaultTableModel dt, String name1, String v1, String name2, String v2) {
 		try {
 			st = con.createStatement();
-			sql = "select * from buslist where "+v1.trim()+" = '"+v2.trim()+"' and "+v3.trim()+" = '"+v4.trim()+"'";
+			sql = "select * from buslist where "+name1.trim()+" = '"+v1.trim()+"' and "+name2.trim()+" = '"+v2.trim()+"'";
 			rs = st.executeQuery(sql);
 			
 			for(int i = 0; i < dt.getRowCount();) {
@@ -127,10 +127,10 @@ public class BusListDAO {
 		}
 	}
 	
-	public void busListAll(DefaultTableModel dt, String v1, String v2, String v3, String v4, String v5, String v6) {
+	public void busListAll(DefaultTableModel dt, String name1, String v1, String name2, String v2, String name3, String v3) {
 		try {
 			st = con.createStatement();
-			sql = "select * from buslist where "+v1.trim()+" = '"+v2.trim()+"' and "+v3.trim()+" = '"+v4.trim()+"' and "+v5.trim()+" = '"+v6.trim()+"'";
+			sql = "select * from buslist where "+name1.trim()+" = '"+v1.trim()+"' and "+name2.trim()+" = '"+v2.trim()+"' and "+name3.trim()+" = '"+v3.trim()+"'";
 			rs = st.executeQuery(sql);
 			
 			for(int i = 0; i < dt.getRowCount();) {
